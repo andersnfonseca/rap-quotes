@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -5,11 +10,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #ff8859;
     color: white;
     position: relative;
     overflow: hidden;
     font-family: 'Roboto Mono', monospace;
+    background: url('/background.png') center/cover no-repeat;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
 }
 
 .quote {
@@ -46,4 +62,9 @@ p {
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+
+#repo a {
+    text-decoration: none;
+    color: white;
 }
