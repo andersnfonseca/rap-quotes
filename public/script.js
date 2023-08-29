@@ -30,7 +30,7 @@ function showElement(music, quote, artist) {
 
     musicElement.textContent = music;
     quoteElement.textContent = `"${quote}"`;
-    artistElement.textContent = artist;
+    artistElement.textContent = `- ${artist}`;
     
 }
 
