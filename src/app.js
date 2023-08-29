@@ -3,11 +3,11 @@ const app = express()
 const bodyParser = require('body-parser')
 const { default: mongoose } = require('mongoose')
 require('dotenv').config()
+const quoteRoute = require('../routes/quoteRoute')
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
-
 
 //conexão do mongoose
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster1.yurom54.mongodb.net/?retryWrites=true&w=majority`)
@@ -17,4 +17,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 .catch((error) => {
     console.log(error)
 })
+
+app.use('/api/v1/quotes', quoteRoute)
+
 module.exports = app
