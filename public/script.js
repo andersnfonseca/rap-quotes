@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000/api/v1/quotes'
+const apiUrl = 'https://rap-quotes.vercel.app/api/v1/quotes'
 
 async function fetchData() {
     try {
