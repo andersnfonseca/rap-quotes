@@ -7,9 +7,8 @@ router.get('/', async (req, res) => {
         const quotes = await Quote.find()
         res.status(200).json({
             length: quotes.length,
-            data: {
             quotes
-        }})
+        })
     } catch (error) {
         res.status(500).json({error: error})
     }
