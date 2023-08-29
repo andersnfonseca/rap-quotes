@@ -1,0 +1,49 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ff8859;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.quote {
+    position: relative;
+    text-align: center;
+}
+
+#music {
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+#artist {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+
+#logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#repo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

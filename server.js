@@ -14,7 +14,6 @@ server.on('listening', onListening)
 console.log(`Servidor rodando em http://localhost:${process.env.PORT}`)
 
 // Normalizando porta 
-
 function normalizePort(value) {
   const port = parseInt(value, 10)
 
@@ -29,7 +28,6 @@ function normalizePort(value) {
 }
 
 // Tratamento de erros do servidor 
-
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error
@@ -53,7 +51,6 @@ switch (error.code) {
 }
 
 // Debug
-
 function onListening() {
   const addr = server.address()
   const bind = typeof addr === 'string'
