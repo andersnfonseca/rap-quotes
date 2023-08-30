@@ -1,4 +1,4 @@
-const baseApiUrl = window.location.href
+const baseApiUrl = 'http://localhost:3000/'
 
 async function fetchData() {
     try {
