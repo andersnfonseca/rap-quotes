@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "best rap quotes ever",
   "main": "server.js",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "andzika",

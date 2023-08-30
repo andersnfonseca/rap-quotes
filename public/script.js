@@ -1,8 +1,8 @@
-const apiUrl = 'https://rap-quotes-mv4mpf0e1-andersnfonseca.vercel.app/api/v1/quotes'
+const baseApiUrl = 'http://localhost:3000/'
 
 async function fetchData() {
     try {
-        const response = await fetch(apiUrl)
+        const response = await fetch(baseApiUrl + 'api/v1/quotes')
 
         if (!response.ok) {
             throw new Error('deu erro')
