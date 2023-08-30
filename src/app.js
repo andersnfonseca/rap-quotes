@@ -10,13 +10,13 @@ app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
 
-
-
 app.use((req, res, next) => {
     res.header("Acess-Control-Allow-Origin", "*")
+    res.header("Acess-Control-Allow-Methods", 'GET, PUT, POST, DELETE')
     app.use(cors())
     next()
 })
+
 app.use('/api/v1/quotes', quoteRoute)
 
 //conexão do mongoose
@@ -27,7 +27,5 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD
 .catch((error) => {
     console.log(error)
 })
-
-
 
 module.exports = app

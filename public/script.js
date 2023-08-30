@@ -1,4 +1,4 @@
-const apiUrl = 'https://rap-quotes.vercel.app/api/v1/quotes'
+const apiUrl = 'https://rap-quotes-mv4mpf0e1-andersnfonseca.vercel.app/api/v1/quotes'
 
 async function fetchData() {
     try {
