@@ -10,12 +10,7 @@ app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
 
-app.use((req, res, next) => {
-    res.header("Acess-Control-Allow-Origin", "*")
-    res.header("Acess-Control-Allow-Methods", 'GET, PUT, POST, DELETE')
-    app.use(cors())
-    next()
-})
+app.use(cors())
 
 app.use('/api/v1/quotes', quoteRoute)
 
