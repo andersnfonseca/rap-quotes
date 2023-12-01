@@ -1,4 +1,4 @@
-const baseApiUrl = 'https://rap-quotes.vercel.app/'
+const baseApiUrl = window.location.href
 
 async function fetchData() {
     try {
