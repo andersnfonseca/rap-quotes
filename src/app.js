@@ -15,7 +15,7 @@ app.use(cors())
 app.use('/api/v1/quotes', quoteRoute)
 
 //conexão do mongoose
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.cibjkve.mongodb.net/?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster1.yurom54.mongodb.net/?retryWrites=true&w=majority`)
 .then(() => {
     console.log('Conectado ao DB')
 })
